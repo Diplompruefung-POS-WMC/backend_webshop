@@ -1,2 +1,20 @@
 ### GET all categories
-http://localhost:8080/categories
+GET http://localhost:8080/categories
+
+### GET products by categorie
+GET http://localhost:8080/categories/1/products
+
+### GET products by categorie
+GET http://localhost:8080/categories/3/products
+
+### GET products by categorie - error not found
+GET http://localhost:8080/categories/99/products
+
+### GET product information
+GET http://localhost:8080/product/1009
+
+### GET product information
+GET http://localhost:8080/product/1020
+
+### GET product information - error not found
+GET http://localhost:8080/product/999999
