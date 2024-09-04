@@ -1,0 +1,187 @@
+[
+  {
+    "id": 0,
+    "name": "Electronics",
+    "products": [
+      {
+        "productID": 1001,
+        "productName": "Smartphone X10",
+        "price": 499.99,
+        "stock": 10,
+        "rating": 4.2,
+        "img_url": "https://www.backmarket.at/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D640/https://d1eh9yux7w8iql.cloudfront.net/product_images/634907_677ad6cc-e97d-4e46-bea4-8ca37750b7b3.jpg"
+      },
+      {
+        "productID": 1005,
+        "productName": "Wireless Noise-Canceling Headphones",
+        "price": 199.99,
+        "stock": 8,
+        "rating": 4.7,
+        "img_url": "https://www.bhphotovideo.com/images/images2500x2500/shure_sbh2350_bk_aonic_50_wireless_noise_1548756.jpg"
+      },
+      {
+        "productID": 1009,
+        "productName": "Ultra HD 4K Smart TV",
+        "price": 899.99,
+        "stock": 6,
+        "rating": 4.9,
+        "img_url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5421/5421724ld.jpg"
+      },
+      {
+        "productID": 1013,
+        "productName": "Wireless Bluetooth Speaker",
+        "price": 79.99,
+        "stock": 4,
+        "rating": 4.8,
+        "img_url": "https://i5.walmartimages.com/asr/ccf61324-84af-44fa-b18f-fa3c59bb64aa_2.d0dca860eaa75d38080c9307e3c4ceb7.jpeg"
+      },
+      {
+        "productID": 1017,
+        "productName": "Wireless Gaming Mouse",
+        "price": 59.99,
+        "stock": 12,
+        "rating": 4.1,
+        "img_url": "https://th.bing.com/th/id/OIP.drbLTvASAGcBphrtN3BeWQHaEQ?pid=ImgDet&rs=1"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Home and Kitchen",
+    "products": [
+      {
+        "productID": 1002,
+        "productName": "Multifunctional Blender",
+        "price": 129.99,
+        "stock": 5,
+        "rating": 3.8,
+        "img_url": "https://ae01.alicdn.com/kf/HTB12UsswNSYBuNjSsphq6zGvVXaL/A5200-Electric-Multifunctional-High-Performance-Blender-for-Smoothies-Juice-3HP-BPA-Free-2-Liters.jpg"
+      },
+      {
+        "productID": 1006,
+        "productName": "Non-Stick Electric Skillet",
+        "price": 59.99,
+        "stock": 12,
+        "rating": 3.9,
+        "img_url": "https://i5.walmartimages.com/asr/92b71473-0f55-4bc9-bc54-343c09547963_1.2a29ccd0276384434ef463d06a3ee5ac.jpeg"
+      },
+      {
+        "productID": 1010,
+        "productName": "Stainless Steel Cookware Set",
+        "price": 249.99,
+        "stock": 2,
+        "rating": 4.6,
+        "img_url": "https://secure.img1.wfcdn.com/lf/maxsquare/hash/227/23675861/1/Tramontina-Gourmet-Prima-10-Piece-Stainless-Steel-Cookware-Set.jpg"
+      },
+      {
+        "productID": 1014,
+        "productName": "Robotic Vacuum Cleaner",
+        "price": 199.99,
+        "stock": 8,
+        "rating": 4.5,
+        "img_url": "https://i5.walmartimages.com/asr/df8dac97-15c7-494e-a899-897c2403293a_1.27fd1b142f7c4b24a61cfeb861fe2867.jpeg"
+      },
+      {
+        "productID": 1018,
+        "productName": "Premium Chef's Knife",
+        "price": 89.99,
+        "stock": 6,
+        "rating": 4.9,
+        "img_url": "https://i.pinimg.com/originals/ff/53/e9/ff53e97cb92171219439fa6c4a8ce842.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Clothing",
+    "products": [
+      {
+        "productID": 1003,
+        "productName": "Classic Denim Jacket",
+        "price": 79.99,
+        "stock": 20,
+        "rating": 4.5,
+        "img_url": "https://i5.walmartimages.com/asr/950450de-3a0b-4267-8b6e-8d56467c11a8.dd203a8da0c36bed60f781409ce80339.jpeg"
+      },
+      {
+        "productID": 1007,
+        "productName": "Cotton Crewneck T-Shirt",
+        "price": 14.99,
+        "stock": 25,
+        "rating": 4.3,
+        "img_url": "https://bananarepublicfactory.gapfactory.com/webcontent/0028/232/280/cn28232280.jpg"
+      },
+      {
+        "productID": 1011,
+        "productName": "Sports Performance Leggings",
+        "price": 34.99,
+        "stock": 30,
+        "rating": 4.4,
+        "img_url": "https://i5.walmartimages.com/asr/5b7e02c2-a9c6-47ad-8413-747bd503fdcf.953e270718ac807ae1fc5c712b82e59b.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+      },
+      {
+        "productID": 1015,
+        "productName": "Leather Crossbody Bag",
+        "price": 89.99,
+        "stock": 15,
+        "rating": 4.2,
+        "img_url": "https://th.bing.com/th/id/R.0499b2bf64f4db848f133b747076f49f?rik=euYVy0xMJUbLAg&pid=ImgRaw&r=0"
+      },
+      {
+        "productID": 1019,
+        "productName": "Men's Waterproof Jacket",
+        "price": 79.99,
+        "stock": 4,
+        "rating": 4.3,
+        "img_url": "https://th.bing.com/th/id/OIP.n3KPICw7TlKBmWVxqCkhuAHaHa?pid=ImgDet&rs=1"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Beauty",
+    "products": [
+      {
+        "productID": 1004,
+        "productName": "Moisturizing Facial Cream",
+        "price": 24.99,
+        "stock": 15,
+        "rating": 4.1,
+        "img_url": "https://i5.walmartimages.com/asr/6a2b5b20-cc7a-4890-bf0b-e79023926167.d75c47eed3e27c4691a5c12f346fd529.jpeg"
+      },
+      {
+        "productID": 1008,
+        "productName": "Facial Cleansing Brush",
+        "price": 39.99,
+        "stock": 18,
+        "rating": 4.0,
+        "img_url": "https://cdn11.bigcommerce.com/s-djp6s5xq1z/images/stencil/1280x1280/products/1064/3561/67510-Cala-Facial-Cleansing-Brush-Purple__65774.1581119650.jpg?c=2&imbypass=on"
+      },
+      {
+        "productID": 1012,
+        "productName": "Hydrating Face Mask",
+        "price": 9.99,
+        "stock": 20,
+        "rating": 3.7,
+        "img_url": "https://i.pinimg.com/originals/01/53/91/015391beeb1a8bfe20154edf91a4955c.jpg"
+      },
+      {
+        "productID": 1016,
+        "productName": "Anti-Aging Night Cream",
+        "price": 49.99,
+        "stock": 10,
+        "rating": 4.7,
+        "img_url": "https://images-na.ssl-images-amazon.com/images/I/717Sku5%2BvuL.jpg"
+      },
+      {
+        "productID": 1020,
+        "productName": "Eyeshadow Palette",
+        "price": 24.99,
+        "stock": 20,
+        "rating": 4.6,
+        "img_url": "https://th.bing.com/th/id/R.116b5562d7315383fe8b8be58658c4f0?rik=Pkjp0k4%2bDscNWg&riu=http%3a%2f%2fbeauty-vanity.com%2fwp-content%2fuploads%2f2014%2f02%2fIMG_1868.jpg&ehk=sp3%2f9d6KE2BDpamzEMLJhDoOZkr3k98WAKBZ2ljqLLs%3d&risl=&pid=ImgRaw&r=0"
+      }
+    ]
+  }
+]
+
