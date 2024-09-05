@@ -6,6 +6,7 @@ import com.example.backend_webshop.database.ProductRepository;
 import com.example.backend_webshop.models.Basket;
 import com.example.backend_webshop.models.Category;
 import com.example.backend_webshop.models.Product;
+import com.example.backend_webshop.observer.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +23,8 @@ public class WebshopRestController {
     private final CategoryRepository categoryRepository;
     private final ProductRepository productRepository;
     private final BasketRepository basketRepository;
+
+    private final ProductService productService = new ProductService();
 
     @GetMapping("/categories")
     public ResponseEntity<List<Category>> getCategories() {
@@ -48,6 +51,7 @@ public class WebshopRestController {
         Product product = productRepository.findById(productId).orElseThrow(() ->
                 new ResponseStatusException(HttpStatus.NOT_FOUND, "Error - productId not found - please enter a valid ID"));
 
+        productService.notifyObserver(productId);
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
 

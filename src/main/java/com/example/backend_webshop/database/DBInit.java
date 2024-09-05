@@ -32,7 +32,7 @@ public class DBInit {
 
             categoryRepository.saveAll(categories);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Fehler beim Einlesen der products.json", e);
         }
     }
 }
