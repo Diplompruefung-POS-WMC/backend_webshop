@@ -1,20 +1,51 @@
 ### GET all categories
 GET http://localhost:8080/categories
 
-### GET products by categorie
-GET http://localhost:8080/categories/1/products
+### GET products by categorie ID
+GET http://localhost:8080/categories/0/products
 
-### GET products by categorie
-GET http://localhost:8080/categories/3/products
+### GET products by categorie ID
+GET http://localhost:8080/categories/2/products
 
-### GET products by categorie - error not found
-GET http://localhost:8080/categories/99/products
+### GET products by categorie ID - Test invalid ID
+GET http://localhost:8080/categories/999/products
 
-### GET product information
+### GET product details
 GET http://localhost:8080/product/1009
 
-### GET product information
-GET http://localhost:8080/product/1020
+### GET product details
+GET http://localhost:8080/product/1011
 
-### GET product information - error not found
-GET http://localhost:8080/product/999999
+### GET product details - Test invalid ID
+GET http://localhost:8080/product/999
+
+### POST new basket entry
+POST http://localhost:8080/addToBasket
+Content-Type: application/json
+
+{
+  "productId": 1009,
+  "amount": 1,
+  "isOutOfStock": false
+}
+
+### POST new basket entry - test not enought stock
+POST http://localhost:8080/addToBasket
+Content-Type: application/json
+
+{
+  "productId": 1009,
+  "amount": 1000,
+  "isOutOfStock": false
+}
+
+### POST new basket entry - test invalid id
+POST http://localhost:8080/addToBasket
+Content-Type: application/json
+
+{
+  "productId": 999,
+  "amount": 1,
+  "isOutOfStock": false
+}
+

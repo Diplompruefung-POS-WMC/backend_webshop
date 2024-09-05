@@ -1,9 +1,9 @@
 package com.example.backend_webshop.database;
 
-import com.example.backend_webshop.repository.CategoryRepository;
-import com.example.backend_webshop.model.Category;
+import com.example.backend_webshop.models.Category;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -17,23 +17,22 @@ public class DBInit {
     private final CategoryRepository categoryRepository;
 
     @PostConstruct
-    public void loadData(){
-        ObjectMapper objectMapper = new ObjectMapper();
+    public void loadDataFromJson(){
+        ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
 
         try {
-            List<Category> categoryList = objectMapper.readValue(
+            List<Category> categories = objectMapper.readValue(
                     getClass().getResourceAsStream("/products.json"),
                     new TypeReference<>() {}
             );
 
-            categoryList.forEach(category -> category.getProducts()
-                    .forEach(product -> product.setCategory(category)));
+            categories.forEach(category -> category.getProducts().forEach(
+                    product -> product.setCategory(category)
+            ));
 
-
-            categoryRepository.saveAll(categoryList);
+            categoryRepository.saveAll(categories);
         } catch (IOException e) {
-            System.err.println("Error loading data: " + e.getMessage());
+            throw new RuntimeException(e);
         }
-
     }
 }

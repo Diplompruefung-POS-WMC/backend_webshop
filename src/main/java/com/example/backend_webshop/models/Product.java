@@ -1,6 +1,7 @@
-package com.example.backend_webshop.model;
+package com.example.backend_webshop.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -12,19 +13,26 @@ import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
 @Getter
+@Setter
 @Entity
 public class Product {
     @Id
-    private Long productID;
+    @JsonProperty("productID")
+    private Long productId;
     private String productName;
-    private double price;
-    private double stock;
-    private double rating;
-    private String img_url;
-    @ManyToOne
+    private Double price;
+    private Integer stock;
+    private Double rating;
+    @JsonProperty("img_url")
+    private String imgUrl;
+
     @JsonIgnore
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "categoryId")
+    @ManyToOne
     private Category category;
+
+    public void decrementStock(Integer amount){
+        setStock(this.stock - amount);
+    }
 }
