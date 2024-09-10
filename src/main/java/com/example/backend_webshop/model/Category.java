@@ -1,4 +1,4 @@
-package com.example.backend_webshop.models;
+package com.example.backend_webshop.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.CascadeType;
@@ -20,8 +20,8 @@ import java.util.List;
 public class Category {
     @Id
     @JsonProperty("id")
-    private Long categoryId;
+    private Long productId;
     private String name;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products;
 }

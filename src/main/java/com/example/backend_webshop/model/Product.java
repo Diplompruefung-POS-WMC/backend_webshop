@@ -1,11 +1,8 @@
-package com.example.backend_webshop.models;
+package com.example.backend_webshop.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,14 +22,14 @@ public class Product {
     private Integer stock;
     private Double rating;
     @JsonProperty("img_url")
-    private String imgUrl;
+    private String imageUrl;
 
     @JsonIgnore
-    @JoinColumn(name = "categoryId")
     @ManyToOne
+    @JoinColumn(name = "category")
     private Category category;
 
-    public void decrementStock(Integer amount){
-        setStock(this.stock - amount);
+    public void incrementStock(Integer amount){
+        this.stock = getStock() - amount;
     }
 }

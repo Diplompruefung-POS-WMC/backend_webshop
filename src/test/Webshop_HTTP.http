@@ -1,51 +1,74 @@
-### GET all categories
+### GET all categories with the current products
 GET http://localhost:8080/categories
 
-### GET products by categorie ID
+### GET all products from selected category
 GET http://localhost:8080/categories/0/products
 
-### GET products by categorie ID
-GET http://localhost:8080/categories/2/products
+### GET all products from another selected category
+GET http://localhost:8080/categories/3/products
 
-### GET products by categorie ID - Test invalid ID
+### GET all products from selected category - test invalid ID
 GET http://localhost:8080/categories/999/products
 
-### GET product details
-GET http://localhost:8080/product/1009
+### GET product details from a selected product
+GET http://localhost:8080/product/1001
 
-### GET product details
-GET http://localhost:8080/product/1011
+### GET product details from another selected product
+GET http://localhost:8080/product/1020
 
-### GET product details - Test invalid ID
+### GET product details from a selected product - test invalid ID
 GET http://localhost:8080/product/999
 
-### POST new basket entry
+### POST a product into basket
 POST http://localhost:8080/addToBasket
 Content-Type: application/json
 
 {
-  "productId": 1009,
-  "amount": 1,
-  "isOutOfStock": false
+  "productId": 1001,
+  "amount": 1
 }
 
-### POST new basket entry - test not enought stock
+### POST a product into basket
 POST http://localhost:8080/addToBasket
 Content-Type: application/json
 
 {
-  "productId": 1009,
-  "amount": 1000,
-  "isOutOfStock": false
+  "productId": 1017,
+  "amount": 8
 }
 
-### POST new basket entry - test invalid id
+### POST a product into basket - test not enouth amount
 POST http://localhost:8080/addToBasket
 Content-Type: application/json
 
 {
-  "productId": 999,
-  "amount": 1,
-  "isOutOfStock": false
+  "productId": 1005,
+  "amount": 9
 }
 
+### POST a product into basket - test sold out
+POST http://localhost:8080/addToBasket
+Content-Type: application/json
+
+{
+  "productId": 1005,
+  "amount": 8
+}
+
+### POST a product into basket - test sold out
+POST http://localhost:8080/addToBasket
+Content-Type: application/json
+
+{
+  "productId": 1005,
+  "amount": 1
+}
+
+### POST a product into basket - test invalid ID
+POST http://localhost:8080/addToBasket
+Content-Type: application/json
+
+{
+  "productId": 0,
+  "amount": 0
+}

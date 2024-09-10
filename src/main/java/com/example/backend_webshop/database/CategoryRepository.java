@@ -1,6 +1,6 @@
 package com.example.backend_webshop.database;
 
-import com.example.backend_webshop.models.Category;
+import com.example.backend_webshop.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

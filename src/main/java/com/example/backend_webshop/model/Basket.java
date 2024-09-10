@@ -1,4 +1,4 @@
-package com.example.backend_webshop.models;
+package com.example.backend_webshop.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

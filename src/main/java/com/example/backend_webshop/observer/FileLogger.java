@@ -1,12 +1,14 @@
 package com.example.backend_webshop.observer;
 
+
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 @Slf4j
-public class ConsoleLoggerObserver implements ProductObserver{
-
+@Component
+public class FileLogger implements ObserverLogger{
     @Override
     public void update(Long productId) {
-        log.info("User requested details on product with id: " + productId);
+        log.info("Filelogger");
     }
 }

@@ -1,25 +1,37 @@
 package com.example.backend_webshop.observer;
 
+import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductService {
-    private final List<ProductObserver> observers = new ArrayList<>();
+//mit @Service können observers registriert werden, indem über die betroffenen Klassen @Component geschrieben wird
+//wichtig ist ein Konstruktor mit @Autowired!! @RequiredArgsConstruktor funktioniert NICHT!!
+@Service
+public class ProductService implements Subject{
+    private final List<ObserverLogger> observers;
 
-    public ProductService() {
-        addObserver(new ConsoleLoggerObserver());
-        addObserver(new FileLoggerObserver());
+    @Autowired
+    public ProductService(List<ObserverLogger> observers) {
+        this.observers = observers;
     }
 
-    public void addObserver(ProductObserver observer){
-        observers.add(observer);
+
+    @Override
+    public void addObserver(ObserverLogger observerLogger) {
+        observers.add(observerLogger);
     }
 
-    public void removeObserver(ProductObserver observer){
-        observers.remove(observer);
+    @Override
+    public void removeObserver(ObserverLogger observerLogger) {
+        observers.remove(observerLogger);
     }
 
-    public void notifyObserver(Long productId){
-        observers.forEach(observer -> observer.update(productId));
+    @Override
+    public void notifyObservers(Long productId) {
+        observers.forEach(observerLogger ->
+                observerLogger.update(productId));
     }
 }

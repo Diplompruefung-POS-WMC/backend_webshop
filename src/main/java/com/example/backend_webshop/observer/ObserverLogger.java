@@ -1,5 +1,5 @@
 package com.example.backend_webshop.observer;
 
-public interface ProductObserver {
+public interface ObserverLogger {
     void update(Long productId);
 }
