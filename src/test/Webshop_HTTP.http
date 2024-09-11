@@ -16,6 +16,9 @@ GET http://localhost:8080/product/1001
 ### GET product details from another selected product
 GET http://localhost:8080/product/1020
 
+### GET product details from another selected product
+GET http://localhost:8080/product/1009
+
 ### GET product details from a selected product - test invalid ID
 GET http://localhost:8080/product/999
 
@@ -72,3 +75,17 @@ Content-Type: application/json
   "productId": 0,
   "amount": 0
 }
+
+### GET total statistic of all products
+GET http://localhost:8080/statistics?method=total
+
+
+### GET total statistic of all products
+GET http://localhost:8080/statistics?method=avg
+
+
+### GET total statistic of most clicked products
+GET http://localhost:8080/statistics?method=hottest
+
+### GET total statistic of most clicked products - test wrong request parameter
+GET http://localhost:8080/statistics?method=high

@@ -1,10 +1,6 @@
 package com.example.backend_webshop.observer;
 
-import lombok.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 
 //mit @Service können observers registriert werden, indem über die betroffenen Klassen @Component geschrieben wird
@@ -13,7 +9,6 @@ import java.util.List;
 public class ProductService implements Subject{
     private final List<ObserverLogger> observers;
 
-    @Autowired
     public ProductService(List<ObserverLogger> observers) {
         this.observers = observers;
     }

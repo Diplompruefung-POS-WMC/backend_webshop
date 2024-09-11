@@ -15,7 +15,9 @@ public class Behavior {
     private Integer clickCount;
     private Date date;
 
-    public void updateClickCount(){
+    public void updateClickCount() {
         this.clickCount++;
+        setDate(new Date());
     }
 }
+
